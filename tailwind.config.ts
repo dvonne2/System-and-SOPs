@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        stock: {
+          money: "hsl(var(--stock-money))",
+          inventory: "hsl(var(--stock-inventory))",
+          people: "hsl(var(--stock-people))",
+          reputation: "hsl(var(--stock-reputation))",
+          operations: "hsl(var(--stock-operations))",
+          energy: "hsl(var(--stock-energy))",
+        },
+        loop: {
+          reinforcing: "hsl(var(--loop-reinforcing))",
+          balancing: "hsl(var(--loop-balancing))",
+        },
+        leak: "hsl(var(--leak-color))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +93,41 @@ export default {
             height: "0",
           },
         },
+        pulse: {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.8",
+            transform: "scale(1.02)",
+          },
+        },
+        "slide-in-right": {
+          from: {
+            transform: "translateX(100%)",
+            opacity: "0",
+          },
+          to: {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        "fade-in": {
+          from: {
+            opacity: "0",
+          },
+          to: {
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "slide-in-right": "slide-in-right 0.3s ease-out",
+        "fade-in": "fade-in 0.3s ease-out",
       },
     },
   },
