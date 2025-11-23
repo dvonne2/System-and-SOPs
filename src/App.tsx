@@ -6,7 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import VisualSystem from "./pages/VisualSystem";
 import MediaBuying from "./pages/MediaBuying";
+import Dashboard from "./pages/mediabuying/Dashboard";
+import AudienceTargeting from "./pages/mediabuying/strategy/AudienceTargeting";
 import SOPCreatingPixel from "./pages/mediabuying/SOPCreatingPixel";
+import ROAS from "./pages/mediabuying/kpis/ROAS";
+import Day1 from "./pages/mediabuying/learning/Day1";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,7 +25,11 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/visualsystem" element={<VisualSystem />} />
           <Route path="/mediabuying" element={<MediaBuying />} />
+          <Route path="/mediabuying/dashboard" element={<Dashboard />} />
+          <Route path="/mediabuying/strategy/audience-targeting" element={<AudienceTargeting />} />
           <Route path="/mediabuying/sops/creating-facebook-ads-pixel" element={<SOPCreatingPixel />} />
+          <Route path="/mediabuying/kpis/roas" element={<ROAS />} />
+          <Route path="/mediabuying/learning/day-1" element={<Day1 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
