@@ -46,13 +46,13 @@ export const AlertsBanner = () => {
                 : "hsl(38 92% 50%)" 
             }} 
           />
-          <AlertTitle className="text-white">{alert.title}</AlertTitle>
-          <AlertDescription className="text-gray-300 flex items-center justify-between">
+          <AlertTitle className="text-foreground font-semibold">{alert.title}</AlertTitle>
+          <AlertDescription className="text-foreground/80 flex items-center justify-between">
             <span>{alert.description}</span>
             <Button 
               size="sm" 
               variant="ghost" 
-              className="text-white hover:text-white/80"
+              className="text-foreground hover:text-foreground/80"
             >
               Investigate
             </Button>

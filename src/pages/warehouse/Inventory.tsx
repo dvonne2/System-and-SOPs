@@ -125,10 +125,10 @@ export default function Inventory() {
         {/* Page Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-white mb-2">
+            <h1 className="text-3xl font-bold text-foreground mb-2">
               Stock Management Hub
             </h1>
-            <p className="text-gray-400">
+            <p className="text-muted-foreground">
               Real-time inventory tracking and distribution management
             </p>
           </div>
@@ -140,29 +140,29 @@ export default function Inventory() {
 
         {/* Tabs */}
         <Tabs defaultValue="warehouse" className="space-y-6">
-          <TabsList className="bg-[#1E293B] border border-[hsl(var(--warehouse-primary)/0.2)]">
-            <TabsTrigger value="warehouse" className="data-[state=active]:bg-[hsl(var(--warehouse-primary))]">
+          <TabsList className="bg-white border border-[hsl(var(--warehouse-primary)/0.2)]">
+            <TabsTrigger value="warehouse" className="data-[state=active]:bg-[hsl(var(--warehouse-primary))] data-[state=active]:text-white">
               Warehouse Stock
             </TabsTrigger>
-            <TabsTrigger value="da-positions" className="data-[state=active]:bg-[hsl(var(--warehouse-primary))]">
+            <TabsTrigger value="da-positions" className="data-[state=active]:bg-[hsl(var(--warehouse-primary))] data-[state=active]:text-white">
               DA Stock Positions
             </TabsTrigger>
-            <TabsTrigger value="movement" className="data-[state=active]:bg-[hsl(var(--warehouse-primary))]">
+            <TabsTrigger value="movement" className="data-[state=active]:bg-[hsl(var(--warehouse-primary))] data-[state=active]:text-white">
               Stock Movement Log
             </TabsTrigger>
           </TabsList>
 
           {/* Warehouse Stock Tab */}
           <TabsContent value="warehouse" className="space-y-4">
-            <Card className="bg-[#1E293B] border-[hsl(var(--warehouse-primary)/0.2)]">
+            <Card className="bg-white border-[hsl(var(--warehouse-primary)/0.2)] shadow-sm">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-white">Current Inventory</CardTitle>
+                  <CardTitle className="text-foreground">Current Inventory</CardTitle>
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <Input
                       placeholder="Search SKU..."
-                      className="pl-9 bg-[#0F172A] border-[hsl(var(--warehouse-primary)/0.3)] text-white w-64"
+                      className="pl-9 bg-[#F8F8F3] border-[hsl(var(--warehouse-primary)/0.3)] text-foreground w-64"
                     />
                   </div>
                 </div>
@@ -171,13 +171,13 @@ export default function Inventory() {
                 <Table>
                   <TableHeader>
                     <TableRow className="border-[hsl(var(--warehouse-primary)/0.2)]">
-                      <TableHead className="text-gray-400">SKU</TableHead>
-                      <TableHead className="text-gray-400">Product</TableHead>
-                      <TableHead className="text-gray-400">Current Qty</TableHead>
-                      <TableHead className="text-gray-400">Reserved</TableHead>
-                      <TableHead className="text-gray-400">Available</TableHead>
-                      <TableHead className="text-gray-400">Reorder Point</TableHead>
-                      <TableHead className="text-gray-400">Status</TableHead>
+                      <TableHead className="text-muted-foreground">SKU</TableHead>
+                      <TableHead className="text-muted-foreground">Product</TableHead>
+                      <TableHead className="text-muted-foreground">Current Qty</TableHead>
+                      <TableHead className="text-muted-foreground">Reserved</TableHead>
+                      <TableHead className="text-muted-foreground">Available</TableHead>
+                      <TableHead className="text-muted-foreground">Reorder Point</TableHead>
+                      <TableHead className="text-muted-foreground">Status</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -188,20 +188,20 @@ export default function Inventory() {
                           key={item.sku}
                           className="border-[hsl(var(--warehouse-primary)/0.2)]"
                         >
-                          <TableCell className="font-medium text-white">
+                          <TableCell className="font-medium text-foreground">
                             {item.sku}
                           </TableCell>
-                          <TableCell className="text-gray-300">{item.name}</TableCell>
-                          <TableCell className="text-white font-semibold">
+                          <TableCell className="text-foreground">{item.name}</TableCell>
+                          <TableCell className="text-foreground font-semibold">
                             {item.quantity.toLocaleString()}
                           </TableCell>
-                          <TableCell className="text-gray-400">
+                          <TableCell className="text-muted-foreground">
                             {item.reserved.toLocaleString()}
                           </TableCell>
                           <TableCell className="text-[hsl(var(--warehouse-success))] font-semibold">
                             {item.available.toLocaleString()}
                           </TableCell>
-                          <TableCell className="text-gray-400">
+                          <TableCell className="text-muted-foreground">
                             {item.reorderPoint.toLocaleString()}
                           </TableCell>
                           <TableCell>
@@ -231,15 +231,15 @@ export default function Inventory() {
               {deliveryAgents.map((agent) => (
                 <Card
                   key={agent.id}
-                  className="bg-[#1E293B] border-[hsl(var(--warehouse-primary)/0.2)]"
+                  className="bg-white border-[hsl(var(--warehouse-primary)/0.2)] shadow-sm"
                 >
                   <CardHeader>
                     <div className="flex items-start justify-between">
                       <div>
-                        <CardTitle className="text-white text-lg">
+                        <CardTitle className="text-foreground text-lg">
                           {agent.name}
                         </CardTitle>
-                        <p className="text-sm text-gray-400 mt-1">
+                        <p className="text-sm text-muted-foreground mt-1">
                           {agent.id} • {agent.state}
                         </p>
                       </div>
@@ -260,19 +260,19 @@ export default function Inventory() {
                         {Object.entries(agent.stock).map(([sku, qty]) => (
                           <div
                             key={sku}
-                            className="p-2 rounded bg-[#0F172A] text-center"
+                            className="p-2 rounded bg-[#F8F8F3] text-center"
                           >
-                            <p className="text-xs text-gray-400">{sku}</p>
-                            <p className="text-lg font-bold text-white">{qty}</p>
+                            <p className="text-xs text-muted-foreground">{sku}</p>
+                            <p className="text-lg font-bold text-foreground">{qty}</p>
                           </div>
                         ))}
                       </div>
                       <div className="flex items-center justify-between text-xs pt-2 border-t border-[hsl(var(--warehouse-primary)/0.2)]">
-                        <span className="text-gray-400">Last report:</span>
-                        <span className="text-white">{agent.lastReport}</span>
+                        <span className="text-muted-foreground">Last report:</span>
+                        <span className="text-foreground">{agent.lastReport}</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-muted-foreground">
                           Friday Photo:
                         </span>
                         <Badge
@@ -294,9 +294,9 @@ export default function Inventory() {
 
           {/* Movement Log Tab */}
           <TabsContent value="movement" className="space-y-4">
-            <Card className="bg-[#1E293B] border-[hsl(var(--warehouse-primary)/0.2)]">
+            <Card className="bg-white border-[hsl(var(--warehouse-primary)/0.2)] shadow-sm">
               <CardHeader>
-                <CardTitle className="text-white">Recent Stock Movements</CardTitle>
+                <CardTitle className="text-foreground">Recent Stock Movements</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
@@ -325,18 +325,18 @@ export default function Inventory() {
                   ].map((log, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center justify-between p-4 rounded-lg bg-[#0F172A]"
+                      className="flex items-center justify-between p-4 rounded-lg bg-[#F8F8F3]"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="text-xs text-gray-500">{log.time}</div>
+                        <div className="text-xs text-muted-foreground">{log.time}</div>
                         <Badge className="bg-[hsl(var(--warehouse-primary)/0.2)] text-[hsl(var(--warehouse-primary))] border-[hsl(var(--warehouse-primary))]">
                           {log.type}
                         </Badge>
                         <div>
-                          <p className="text-sm font-medium text-white">
+                          <p className="text-sm font-medium text-foreground">
                             {log.sku}
                           </p>
-                          <p className="text-xs text-gray-400">{log.da}</p>
+                          <p className="text-xs text-muted-foreground">{log.da}</p>
                         </div>
                       </div>
                       <div

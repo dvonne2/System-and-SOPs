@@ -47,8 +47,8 @@ export default function WarehouseDashboard() {
       <div className="space-y-6">
         {/* Page Header */}
         <div>
-          <h1 className="text-3xl font-bold text-white mb-2">Command Center</h1>
-          <p className="text-gray-400">
+          <h1 className="text-3xl font-bold text-foreground mb-2">Command Center</h1>
+          <p className="text-muted-foreground">
             Real-time overview of VitalVida warehouse operations
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function WarehouseDashboard() {
 
         {/* Stock Overview */}
         <div>
-          <h2 className="text-xl font-semibold text-white mb-4">
+          <h2 className="text-xl font-semibold text-foreground mb-4">
             Live National Stock Position
           </h2>
           <StockOverview />
@@ -69,7 +69,7 @@ export default function WarehouseDashboard() {
 
         {/* Today's Metrics */}
         <div>
-          <h2 className="text-xl font-semibold text-white mb-4">
+          <h2 className="text-xl font-semibold text-foreground mb-4">
             Today's Performance
           </h2>
           <MetricsCards />
@@ -77,9 +77,9 @@ export default function WarehouseDashboard() {
 
         {/* Quick Insights */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <Card className="bg-[#1E293B] border-[hsl(var(--warehouse-primary)/0.2)]">
+          <Card className="bg-white border-[hsl(var(--warehouse-primary)/0.2)] shadow-sm">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-white">
+              <CardTitle className="flex items-center gap-2 text-foreground">
                 <BarChart3 className="h-5 w-5 text-[hsl(var(--warehouse-primary))]" />
                 Top Performing States
               </CardTitle>
@@ -93,11 +93,11 @@ export default function WarehouseDashboard() {
                 ].map((item) => (
                   <div
                     key={item.state}
-                    className="flex items-center justify-between p-3 rounded-lg bg-[#0F172A]"
+                    className="flex items-center justify-between p-3 rounded-lg bg-[#F8F8F3]"
                   >
                     <div>
-                      <p className="font-medium text-white">{item.state}</p>
-                      <p className="text-sm text-gray-400">
+                      <p className="font-medium text-foreground">{item.state}</p>
+                      <p className="text-sm text-muted-foreground">
                         {item.deliveries} deliveries
                       </p>
                     </div>
@@ -110,9 +110,9 @@ export default function WarehouseDashboard() {
             </CardContent>
           </Card>
 
-          <Card className="bg-[#1E293B] border-[hsl(var(--warehouse-primary)/0.2)]">
+          <Card className="bg-white border-[hsl(var(--warehouse-primary)/0.2)] shadow-sm">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-white">
+              <CardTitle className="flex items-center gap-2 text-foreground">
                 <TrendingUp className="h-5 w-5 text-[hsl(var(--warehouse-success))]" />
                 System Health
               </CardTitle>
@@ -126,13 +126,13 @@ export default function WarehouseDashboard() {
                 ].map((item) => (
                   <div key={item.metric}>
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm text-gray-400">{item.metric}</span>
-                      <span className="text-sm font-medium text-white">
+                      <span className="text-sm text-muted-foreground">{item.metric}</span>
+                      <span className="text-sm font-medium text-foreground">
                         {item.value}
                         {item.unit || "%"}
                       </span>
                     </div>
-                    <div className="w-full bg-[#0F172A] rounded-full h-2">
+                    <div className="w-full bg-[#F8F8F3] rounded-full h-2">
                       <div
                         className="h-2 rounded-full transition-all"
                         style={{

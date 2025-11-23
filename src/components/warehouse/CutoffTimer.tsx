@@ -62,9 +62,9 @@ export const CutoffTimer = () => {
   };
 
   return (
-    <Card className={`bg-[#1E293B] border-2 ${getStatusBg()}`}>
+    <Card className={`bg-white border-2 ${getStatusBg()} shadow-md`}>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-white">
+        <CardTitle className="flex items-center gap-2 text-foreground">
           {status === "locked" ? (
             <Lock className="h-5 w-5" style={{ color: getStatusColor() }} />
           ) : (
@@ -81,7 +81,7 @@ export const CutoffTimer = () => {
           >
             {timeLeft}
           </div>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-muted-foreground">
             {status === "locked" 
               ? "No stock changes allowed until tomorrow" 
               : status === "warning"
