@@ -22,6 +22,8 @@ const StockCard = ({ stock, onClick }: StockCardProps) => {
     // Map specific stocks to academy pages
     if (stock.id === 'ad-spend') {
       navigate('/mediabuying');
+    } else if (stock.id === 'cash') {
+      navigate('/cash/dashboard');
     } else {
       onClick();
     }
