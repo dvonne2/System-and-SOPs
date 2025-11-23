@@ -21,6 +21,7 @@ import Reports from "./pages/warehouse/Reports";
 import InventoryDashboard from "./pages/inventory/Dashboard";
 import MorningRoutine from "./pages/inventory/sops/MorningRoutine";
 import InventoryOfficer from "./pages/inventory/role-overview/InventoryOfficer";
+import CashDashboard from "./pages/cash/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +55,9 @@ const App = () => (
           <Route path="/inventory/dashboard" element={<InventoryDashboard />} />
           <Route path="/inventory/sops/morning-routine" element={<MorningRoutine />} />
           <Route path="/inventory/role-overview/inventory-officer" element={<InventoryOfficer />} />
+          
+          {/* Cash & Working Capital Routes */}
+          <Route path="/cash/dashboard" element={<CashDashboard />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
