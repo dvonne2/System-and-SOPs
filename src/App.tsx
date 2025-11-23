@@ -13,6 +13,11 @@ import ROAS from "./pages/mediabuying/kpis/ROAS";
 import Day1 from "./pages/mediabuying/learning/Day1";
 import WarehouseDashboard from "./pages/warehouse/Dashboard";
 import Inventory from "./pages/warehouse/Inventory";
+import Operations from "./pages/warehouse/Operations";
+import Security from "./pages/warehouse/Security";
+import Agents from "./pages/warehouse/Agents";
+import Bundles from "./pages/warehouse/Bundles";
+import Reports from "./pages/warehouse/Reports";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +41,11 @@ const App = () => (
           {/* Warehouse Routes */}
           <Route path="/warehouse/dashboard" element={<WarehouseDashboard />} />
           <Route path="/warehouse/inventory/*" element={<Inventory />} />
+          <Route path="/warehouse/operations/*" element={<Operations />} />
+          <Route path="/warehouse/security" element={<Security />} />
+          <Route path="/warehouse/agents" element={<Agents />} />
+          <Route path="/warehouse/bundles" element={<Bundles />} />
+          <Route path="/warehouse/reports" element={<Reports />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
