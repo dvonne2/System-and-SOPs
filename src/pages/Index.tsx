@@ -167,49 +167,6 @@ const Index = () => {
         {/* System Starting Point */}
         <SystemStartingPoint />
 
-        {/* Operations Management Tools */}
-        <div className="bg-card rounded-xl p-6 shadow-lg border mb-8">
-          <h2 className="text-xl font-bold text-foreground mb-4">Operations Management</h2>
-          <p className="text-sm text-muted-foreground mb-6">
-            Access specialized tools and systems for day-to-day operations
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <a
-              href="/warehouse/dashboard"
-              className="group block p-6 rounded-lg border-2 border-[hsl(var(--warehouse-primary)/0.3)] bg-gradient-to-br from-[hsl(var(--warehouse-primary)/0.05)] to-transparent hover:border-[hsl(var(--warehouse-primary))] transition-all hover:shadow-lg"
-            >
-              <div className="flex items-start gap-4">
-                <div className="text-4xl">🏢</div>
-                <div>
-                  <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-[hsl(var(--warehouse-primary))] transition-colors">
-                    Warehouse Inventory
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Centralized stock ready to distribute to delivery agents
-                  </p>
-                </div>
-              </div>
-            </a>
-            
-            <a
-              href="/mediabuying/dashboard"
-              className="group block p-6 rounded-lg border-2 border-stock-money/30 bg-gradient-to-br from-stock-money/5 to-transparent hover:border-stock-money transition-all hover:shadow-lg"
-            >
-              <div className="flex items-start gap-4">
-                <div className="text-4xl">📱</div>
-                <div>
-                  <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-stock-money transition-colors">
-                    Media Buying Academy
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Training and SOPs for advertising operations
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
         {/* Loop Explanations */}
         <div className="mt-8">
           <LoopExplanations />
