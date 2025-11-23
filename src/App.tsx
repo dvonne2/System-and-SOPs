@@ -18,21 +18,6 @@ import Security from "./pages/warehouse/Security";
 import Agents from "./pages/warehouse/Agents";
 import Bundles from "./pages/warehouse/Bundles";
 import Reports from "./pages/warehouse/Reports";
-import InventoryDashboard from "./pages/inventory/Dashboard";
-import MorningRoutine from "./pages/inventory/sops/MorningRoutine";
-import InventoryOfficer from "./pages/inventory/role-overview/InventoryOfficer";
-import CashDashboard from "./pages/cash/Dashboard";
-import CashFundamentals from "./pages/cash/academy/Fundamentals";
-import CashDailyOperations from "./pages/cash/academy/DailyOperations";
-import CashOptimization from "./pages/cash/academy/Optimization";
-import WorkingCapitalBasics from "./pages/cash/academy/fundamentals/WorkingCapitalBasics";
-import ReduceCashCycle from "./pages/cash/academy/optimization/ReduceCashCycle";
-import CashOperations from "./pages/cash/operations/Operations";
-import CashPosition from "./pages/cash/operations/CashPosition";
-import PaymentProcessing from "./pages/cash/operations/PaymentProcessing";
-import Disbursements from "./pages/cash/operations/Disbursements";
-import Collections from "./pages/cash/operations/Collections";
-import Reconciliation from "./pages/cash/operations/Reconciliation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -62,25 +47,6 @@ const App = () => (
           <Route path="/warehouse/bundles" element={<Bundles />} />
           <Route path="/warehouse/reports" element={<Reports />} />
           
-          {/* Inventory Academy Routes */}
-          <Route path="/inventory/dashboard" element={<InventoryDashboard />} />
-          <Route path="/inventory/sops/morning-routine" element={<MorningRoutine />} />
-          <Route path="/inventory/role-overview/inventory-officer" element={<InventoryOfficer />} />
-          
-          {/* Cash & Working Capital Routes */}
-          <Route path="/cash" element={<CashDashboard />} />
-          <Route path="/cash/dashboard" element={<CashDashboard />} />
-          <Route path="/cash/academy/fundamentals" element={<CashFundamentals />} />
-          <Route path="/cash/academy/daily-operations" element={<CashDailyOperations />} />
-          <Route path="/cash/academy/optimization" element={<CashOptimization />} />
-          <Route path="/cash/academy/fundamentals/working-capital-basics" element={<WorkingCapitalBasics />} />
-          <Route path="/cash/academy/optimization/reduce-cash-cycle" element={<ReduceCashCycle />} />
-          <Route path="/cash/operations" element={<CashOperations />} />
-          <Route path="/cash/operations/cash-position" element={<CashPosition />} />
-          <Route path="/cash/operations/payment-processing" element={<PaymentProcessing />} />
-          <Route path="/cash/operations/disbursements" element={<Disbursements />} />
-          <Route path="/cash/operations/collections" element={<Collections />} />
-          <Route path="/cash/operations/reconciliation" element={<Reconciliation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
