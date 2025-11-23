@@ -31,6 +31,8 @@ import CashOperations from "./pages/cash/operations/Operations";
 import CashPosition from "./pages/cash/operations/CashPosition";
 import PaymentProcessing from "./pages/cash/operations/PaymentProcessing";
 import Disbursements from "./pages/cash/operations/Disbursements";
+import Collections from "./pages/cash/operations/Collections";
+import Reconciliation from "./pages/cash/operations/Reconciliation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -77,6 +79,8 @@ const App = () => (
           <Route path="/cash/operations/cash-position" element={<CashPosition />} />
           <Route path="/cash/operations/payment-processing" element={<PaymentProcessing />} />
           <Route path="/cash/operations/disbursements" element={<Disbursements />} />
+          <Route path="/cash/operations/collections" element={<Collections />} />
+          <Route path="/cash/operations/reconciliation" element={<Reconciliation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
