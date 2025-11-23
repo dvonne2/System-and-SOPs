@@ -62,6 +62,7 @@ const App = () => (
           <Route path="/inventory/role-overview/inventory-officer" element={<InventoryOfficer />} />
           
           {/* Cash & Working Capital Routes */}
+          <Route path="/cash" element={<CashDashboard />} />
           <Route path="/cash/dashboard" element={<CashDashboard />} />
           <Route path="/cash/academy/fundamentals" element={<CashFundamentals />} />
           <Route path="/cash/academy/daily-operations" element={<CashDailyOperations />} />
