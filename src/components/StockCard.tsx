@@ -1,5 +1,6 @@
 import { Stock } from "@/data/systemsData";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 interface StockCardProps {
   stock: Stock;
@@ -15,9 +16,20 @@ const categoryColors = {
 };
 
 const StockCard = ({ stock, onClick }: StockCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    // Map specific stocks to academy pages
+    if (stock.id === 'ad-spend') {
+      navigate('/mediabuying');
+    } else {
+      onClick();
+    }
+  };
+
   return (
     <div
-      onClick={onClick}
+      onClick={handleClick}
       className={cn(
         "relative p-4 rounded-lg border-2 cursor-pointer transition-all duration-300 hover:shadow-md hover:-translate-y-1",
         categoryColors[stock.category],
