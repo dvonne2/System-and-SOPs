@@ -29,6 +29,7 @@ import WorkingCapitalBasics from "./pages/cash/academy/fundamentals/WorkingCapit
 import ReduceCashCycle from "./pages/cash/academy/optimization/ReduceCashCycle";
 import CashPosition from "./pages/cash/operations/CashPosition";
 import PaymentProcessing from "./pages/cash/operations/PaymentProcessing";
+import Disbursements from "./pages/cash/operations/Disbursements";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -73,6 +74,7 @@ const App = () => (
           <Route path="/cash/academy/optimization/reduce-cash-cycle" element={<ReduceCashCycle />} />
           <Route path="/cash/operations/cash-position" element={<CashPosition />} />
           <Route path="/cash/operations/payment-processing" element={<PaymentProcessing />} />
+          <Route path="/cash/operations/disbursements" element={<Disbursements />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
