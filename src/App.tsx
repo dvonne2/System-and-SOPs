@@ -22,6 +22,11 @@ import InventoryDashboard from "./pages/inventory/Dashboard";
 import MorningRoutine from "./pages/inventory/sops/MorningRoutine";
 import InventoryOfficer from "./pages/inventory/role-overview/InventoryOfficer";
 import CashDashboard from "./pages/cash/Dashboard";
+import CashFundamentals from "./pages/cash/academy/Fundamentals";
+import CashDailyOperations from "./pages/cash/academy/DailyOperations";
+import CashOptimization from "./pages/cash/academy/Optimization";
+import WorkingCapitalBasics from "./pages/cash/academy/fundamentals/WorkingCapitalBasics";
+import ReduceCashCycle from "./pages/cash/academy/optimization/ReduceCashCycle";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -58,6 +63,11 @@ const App = () => (
           
           {/* Cash & Working Capital Routes */}
           <Route path="/cash/dashboard" element={<CashDashboard />} />
+          <Route path="/cash/academy/fundamentals" element={<CashFundamentals />} />
+          <Route path="/cash/academy/daily-operations" element={<CashDailyOperations />} />
+          <Route path="/cash/academy/optimization" element={<CashOptimization />} />
+          <Route path="/cash/academy/fundamentals/working-capital-basics" element={<WorkingCapitalBasics />} />
+          <Route path="/cash/academy/optimization/reduce-cash-cycle" element={<ReduceCashCycle />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
