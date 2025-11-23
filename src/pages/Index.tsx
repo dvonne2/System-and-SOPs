@@ -207,6 +207,23 @@ const Index = () => {
                 </div>
               </div>
             </a>
+
+            <a
+              href="/cash/dashboard"
+              className="group block p-6 rounded-lg border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-transparent hover:border-primary transition-all hover:shadow-lg"
+            >
+              <div className="flex items-start gap-4">
+                <div className="text-4xl">💰</div>
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                    Cash & Working Capital
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Available funds to reinvest in ads, inventory, and operations
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
 
