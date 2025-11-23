@@ -141,10 +141,10 @@ export const CashLayout = ({ children, sidebarContent, title }: CashLayoutProps)
         </div>
       </header>
 
-      <div className="container flex">
+      <div className="flex w-full">
         {/* Sidebar Navigation */}
         <aside className={cn(
-          "fixed lg:sticky top-16 left-0 z-40 h-[calc(100vh-4rem)] w-64 border-r bg-card transition-transform duration-300 overflow-y-auto",
+          "fixed lg:relative top-16 lg:top-0 left-0 z-40 h-[calc(100vh-4rem)] lg:h-auto w-64 border-r bg-card transition-transform duration-300 overflow-y-auto flex-shrink-0",
           sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}>
           <div className="p-6">
@@ -164,7 +164,7 @@ export const CashLayout = ({ children, sidebarContent, title }: CashLayoutProps)
         )}
 
         {/* Main Content with Mode Context */}
-        <main className="flex-1 p-4 md:p-6 lg:p-8">
+        <main className="flex-1 p-4 md:p-6 lg:p-8 min-w-0">
           <ModeProvider mode={mode}>
             {children}
           </ModeProvider>
