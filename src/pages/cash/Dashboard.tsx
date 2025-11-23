@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { CashLayout, useViewMode } from "@/components/CashLayout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, TrendingDown, AlertCircle, DollarSign, ShoppingCart, BarChart3 } from "lucide-react";
+import { TrendingUp, TrendingDown, AlertCircle, DollarSign, ShoppingCart, BarChart3, Plus, Minus } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RecordTransactionModal } from "@/components/cash/RecordTransactionModal";
+import { AllocateFundsModal } from "@/components/cash/AllocateFundsModal";
 
 const sidebarNav = (
   <nav className="space-y-2">
@@ -39,8 +42,12 @@ const sidebarNav = (
 
 const DashboardContent = () => {
   const mode = useViewMode();
+  const [incomeModalOpen, setIncomeModalOpen] = useState(false);
+  const [expenseModalOpen, setExpenseModalOpen] = useState(false);
+  const [adsAllocationOpen, setAdsAllocationOpen] = useState(false);
+  const [inventoryAllocationOpen, setInventoryAllocationOpen] = useState(false);
 
-  // Sample cash data
+  // Sample cash data - TODO: Replace with API data from your Node backend
   const cashData = {
     currentCash: 4200000,
     dailyChange: 5.2,
@@ -74,6 +81,16 @@ const DashboardContent = () => {
               <TrendingUp className="h-3 w-3 text-green-500" />
               <span className="text-green-500">+{cashData.dailyChange}%</span> from yesterday
             </p>
+            <div className="flex gap-2 mt-3">
+              <Button size="sm" variant="outline" onClick={() => setIncomeModalOpen(true)} className="flex-1">
+                <Plus className="h-3 w-3 mr-1" />
+                Income
+              </Button>
+              <Button size="sm" variant="outline" onClick={() => setExpenseModalOpen(true)} className="flex-1">
+                <Minus className="h-3 w-3 mr-1" />
+                Expense
+              </Button>
+            </div>
           </CardContent>
         </Card>
 
@@ -87,6 +104,14 @@ const DashboardContent = () => {
             <p className="text-xs text-muted-foreground mt-1">
               Safe to spend on media buying
             </p>
+            <Button 
+              size="sm" 
+              variant="default" 
+              onClick={() => setAdsAllocationOpen(true)} 
+              className="w-full mt-3"
+            >
+              Allocate Funds
+            </Button>
           </CardContent>
         </Card>
 
@@ -100,6 +125,14 @@ const DashboardContent = () => {
             <p className="text-xs text-muted-foreground mt-1">
               Safe to spend on stock
             </p>
+            <Button 
+              size="sm" 
+              variant="default" 
+              onClick={() => setInventoryAllocationOpen(true)} 
+              className="w-full mt-3"
+            >
+              Allocate Funds
+            </Button>
           </CardContent>
         </Card>
 
@@ -241,23 +274,47 @@ const DashboardContent = () => {
         </CardHeader>
         <CardContent>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <Button variant="outline" className="justify-start">
-              <DollarSign className="mr-2 h-4 w-4" />
-              Check Cash Position
+            <Button variant="outline" className="justify-start" onClick={() => setIncomeModalOpen(true)}>
+              <Plus className="mr-2 h-4 w-4" />
+              Record Income
+            </Button>
+            <Button variant="outline" className="justify-start" onClick={() => setExpenseModalOpen(true)}>
+              <Minus className="mr-2 h-4 w-4" />
+              Record Expense
             </Button>
             <Button variant="outline" className="justify-start">
               <BarChart3 className="mr-2 h-4 w-4" />
-              View Forecast
+              View Transactions
             </Button>
             <Button variant="outline" className="justify-start">
-              <ShoppingCart className="mr-2 h-4 w-4" />
-              Process Payment
-            </Button>
-            <Button variant="outline" className="justify-start">
-              <AlertCircle className="mr-2 h-4 w-4" />
-              Crisis Mode
+              <DollarSign className="mr-2 h-4 w-4" />
+              Generate Report
             </Button>
           </div>
+          
+          {/* Transaction Modals */}
+          <RecordTransactionModal 
+            open={incomeModalOpen} 
+            onOpenChange={setIncomeModalOpen}
+            type="income"
+          />
+          <RecordTransactionModal 
+            open={expenseModalOpen} 
+            onOpenChange={setExpenseModalOpen}
+            type="expense"
+          />
+          <AllocateFundsModal 
+            open={adsAllocationOpen}
+            onOpenChange={setAdsAllocationOpen}
+            type="ads"
+            currentBalance={cashData.currentCash}
+          />
+          <AllocateFundsModal 
+            open={inventoryAllocationOpen}
+            onOpenChange={setInventoryAllocationOpen}
+            type="inventory"
+            currentBalance={cashData.currentCash}
+          />
         </CardContent>
       </Card>
     </div>
