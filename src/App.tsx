@@ -18,6 +18,9 @@ import Security from "./pages/warehouse/Security";
 import Agents from "./pages/warehouse/Agents";
 import Bundles from "./pages/warehouse/Bundles";
 import Reports from "./pages/warehouse/Reports";
+import InventoryDashboard from "./pages/inventory/Dashboard";
+import MorningRoutine from "./pages/inventory/sops/MorningRoutine";
+import InventoryOfficer from "./pages/inventory/role-overview/InventoryOfficer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +49,11 @@ const App = () => (
           <Route path="/warehouse/agents" element={<Agents />} />
           <Route path="/warehouse/bundles" element={<Bundles />} />
           <Route path="/warehouse/reports" element={<Reports />} />
+          
+          {/* Inventory Academy Routes */}
+          <Route path="/inventory/dashboard" element={<InventoryDashboard />} />
+          <Route path="/inventory/sops/morning-routine" element={<MorningRoutine />} />
+          <Route path="/inventory/role-overview/inventory-officer" element={<InventoryOfficer />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
