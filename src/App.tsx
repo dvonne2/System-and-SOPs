@@ -11,6 +11,8 @@ import AudienceTargeting from "./pages/mediabuying/strategy/AudienceTargeting";
 import SOPCreatingPixel from "./pages/mediabuying/SOPCreatingPixel";
 import ROAS from "./pages/mediabuying/kpis/ROAS";
 import Day1 from "./pages/mediabuying/learning/Day1";
+import WarehouseDashboard from "./pages/warehouse/Dashboard";
+import Inventory from "./pages/warehouse/Inventory";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +32,11 @@ const App = () => (
           <Route path="/mediabuying/sops/creating-facebook-ads-pixel" element={<SOPCreatingPixel />} />
           <Route path="/mediabuying/kpis/roas" element={<ROAS />} />
           <Route path="/mediabuying/learning/day-1" element={<Day1 />} />
+          
+          {/* Warehouse Routes */}
+          <Route path="/warehouse/dashboard" element={<WarehouseDashboard />} />
+          <Route path="/warehouse/inventory/*" element={<Inventory />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

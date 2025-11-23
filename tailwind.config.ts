@@ -70,6 +70,11 @@ export default {
           balancing: "hsl(var(--loop-balancing))",
         },
         leak: "hsl(var(--leak-color))",
+        warehouse: {
+          primary: "hsl(var(--warehouse-primary))",
+          success: "hsl(var(--warehouse-success))",
+          alert: "hsl(var(--warehouse-alert))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

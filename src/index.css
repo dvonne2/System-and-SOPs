@@ -46,6 +46,11 @@ All colors MUST be HSL.
     --stock-operations: 210 29% 24%;
     --stock-energy: 0 84.2% 60.2%;
     
+    /* Warehouse System Colors */
+    --warehouse-primary: 262 50% 52%; /* Deep Purple #6B46C1 */
+    --warehouse-success: 142 71% 45%; /* Vibrant Green #10B981 */
+    --warehouse-alert: 0 84% 60%; /* Alert Red #EF4444 */
+    
     --loop-reinforcing: 145 63% 42%;
     --loop-balancing: 0 84.2% 60.2%;
     
