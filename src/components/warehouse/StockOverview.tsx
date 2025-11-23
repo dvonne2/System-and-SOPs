@@ -38,16 +38,16 @@ export const StockOverview = () => {
       {stockData.map((item) => {
         const Icon = item.icon;
         return (
-          <Card key={item.title} className="bg-[#1E293B] border-[hsl(var(--warehouse-primary)/0.2)]">
+          <Card key={item.title} className="bg-white border-[hsl(var(--warehouse-primary)/0.2)] shadow-sm">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium text-gray-400">
+              <CardTitle className="text-sm font-medium text-muted-foreground">
                 {item.title}
               </CardTitle>
               <Icon className="h-4 w-4" style={{ color: item.color }} />
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold text-white">{item.value}</div>
-              <p className="text-xs text-gray-500 mt-1">{item.subtitle}</p>
+              <div className="text-3xl font-bold text-foreground">{item.value}</div>
+              <p className="text-xs text-muted-foreground mt-1">{item.subtitle}</p>
             </CardContent>
           </Card>
         );

@@ -42,9 +42,9 @@ export const MetricsCards = () => {
       {metricsData.map((metric) => {
         const Icon = metric.icon;
         return (
-          <Card key={metric.title} className="bg-[#1E293B] border-[hsl(var(--warehouse-primary)/0.2)]">
+          <Card key={metric.title} className="bg-white border-[hsl(var(--warehouse-primary)/0.2)] shadow-sm">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium text-gray-400">
+              <CardTitle className="text-sm font-medium text-muted-foreground">
                 {metric.title}
               </CardTitle>
               <Icon 
@@ -57,9 +57,9 @@ export const MetricsCards = () => {
               />
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold text-white">{metric.value}</div>
+              <div className="text-3xl font-bold text-foreground">{metric.value}</div>
               <div className="flex items-center justify-between mt-2">
-                <p className="text-xs text-gray-500">{metric.subtitle}</p>
+                <p className="text-xs text-muted-foreground">{metric.subtitle}</p>
                 <span 
                   className={`text-xs font-medium ${
                     metric.trendUp ? "text-[hsl(var(--warehouse-success))]" : "text-[hsl(var(--warehouse-alert))]"
