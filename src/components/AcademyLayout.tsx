@@ -119,10 +119,48 @@ export const AcademyLayout = ({ children, sidebarContent, title, category }: Aca
         )}
 
         {/* Main Content */}
-        <main className="flex-1 p-6 lg:p-8">
+        <main className="flex-1 p-4 md:p-6 lg:p-8">
           {children}
         </main>
       </div>
+    </div>
+  );
+};
+
+interface PageNavigationProps {
+  previous?: { title: string; href: string };
+  next?: { title: string; href: string };
+}
+
+export const PageNavigation = ({ previous, next }: PageNavigationProps) => {
+  return (
+    <div className="flex flex-col sm:flex-row gap-4 mt-12 pt-8 border-t">
+      {previous ? (
+        <Link
+          to={previous.href}
+          className="flex-1 group border rounded-lg p-4 hover:bg-muted transition-colors"
+        >
+          <div className="text-sm text-muted-foreground mb-1">← Previous</div>
+          <div className="font-medium group-hover:text-primary transition-colors">
+            {previous.title}
+          </div>
+        </Link>
+      ) : (
+        <div className="flex-1" />
+      )}
+      {next ? (
+        <Link
+          to={next.href}
+          className="flex-1 group border rounded-lg p-4 hover:bg-muted transition-colors text-right"
+        >
+          <div className="text-sm text-muted-foreground mb-1">Next →</div>
+          <div className="font-medium group-hover:text-primary transition-colors">
+            {next.title}
+          </div>
+        </Link>
+      ) : (
+        <div className="flex-1" />
+      )}
     </div>
   );
 };
