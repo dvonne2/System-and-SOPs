@@ -192,6 +192,7 @@ const SystemForceLanding = () => {
             <span className="nav-link">Features</span>
             <span className="nav-link">Full Features</span>
             <span className="nav-link">Pricing</span>
+            <a href="/referral" className="nav-link">Referral</a>
             <span className="nav-link">FAQ</span>
             <button className="cta-button" style={{ padding: '12px 24px', fontSize: '14px' }}>
               Start Free Trial
