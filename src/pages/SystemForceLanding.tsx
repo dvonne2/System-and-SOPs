@@ -190,7 +190,7 @@ const SystemForceLanding = () => {
           
           <div className="hidden md:flex gap-8 items-center">
             <span className="nav-link">Features</span>
-            <span className="nav-link">Full Features</span>
+            <a href="/features" className="nav-link">Full Features</a>
             <span className="nav-link">Pricing</span>
             <a href="/referral" className="nav-link">Referral</a>
             <span className="nav-link">FAQ</span>
