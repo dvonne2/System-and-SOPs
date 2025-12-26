@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Navigation from '@/components/Navigation';
 
 const Features = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -299,6 +300,7 @@ const Features = () => {
 
   return (
     <div className="min-h-screen font-sans bg-slate-100 text-slate-800">
+      <Navigation />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
         
