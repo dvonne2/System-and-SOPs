@@ -8,6 +8,7 @@ import SystemThinking from "./pages/SystemThinking";
 import VisualSystem from "./pages/VisualSystem";
 import Referral from "./pages/Referral";
 import Features from "./pages/Features";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/visualsystem" element={<VisualSystem />} />
           <Route path="/referral" element={<Referral />} />
           <Route path="/features" element={<Features />} />
+          <Route path="/pricing" element={<Pricing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

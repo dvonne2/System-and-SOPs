@@ -56,8 +56,8 @@ const Navigation = () => {
           
           <div className="hidden md:flex gap-8 items-center">
             <Link to="/systemthinking" className="nav-link">System Thinking</Link>
-            <Link to="/features" className="nav-link">Full Features</Link>
-            <span className="nav-link">Pricing</span>
+            <Link to="/features" className="nav-link">Features</Link>
+            <Link to="/pricing" className="nav-link">Pricing</Link>
             <Link to="/referral" className="nav-link">Referral</Link>
             <span className="nav-link">FAQ</span>
             <button className="cta-button-nav">
