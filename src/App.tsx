@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SystemForceLanding from "./pages/SystemForceLanding";
 import SystemThinking from "./pages/SystemThinking";
 import VisualSystem from "./pages/VisualSystem";
+import Referral from "./pages/Referral";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<SystemForceLanding />} />
           <Route path="/systemthinking" element={<SystemThinking />} />
           <Route path="/visualsystem" element={<VisualSystem />} />
+          <Route path="/referral" element={<Referral />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
