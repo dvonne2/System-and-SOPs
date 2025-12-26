@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 const VisualSystem = () => {
   const [animationsEnabled, setAnimationsEnabled] = useState(false);
@@ -120,7 +121,8 @@ const VisualSystem = () => {
   const closeInfo = () => setSelectedStock(null);
 
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)', padding: '20px' }}>
+    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)', padding: '20px', paddingTop: '80px' }}>
+      <Navigation />
       <div className="max-w-[1600px] mx-auto bg-white rounded-xl p-8 shadow-2xl">
         <h1 className="text-center text-4xl font-bold text-[#2c3e50] mb-2">🌱 Vitalvida System Map</h1>
         <p className="text-center text-[#7f8c8d] italic mb-5">Enhanced Donella Meadows-Style Systems Thinking Diagram</p>

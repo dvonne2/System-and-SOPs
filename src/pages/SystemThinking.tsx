@@ -9,6 +9,7 @@ import LeveragePoints from "@/components/LeveragePoints";
 import Legend from "@/components/Legend";
 import LoopExplanations from "@/components/LoopExplanations";
 import SystemStartingPoint from "@/components/SystemStartingPoint";
+import Navigation from "@/components/Navigation";
 import { stocks, leakPoints, Stock } from "@/data/systemsData";
 
 const Index = () => {
@@ -28,8 +29,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       {/* Main Container */}
-      <div className="container mx-auto px-4 py-8 max-w-7xl">
+      <div className="container mx-auto px-4 py-8 pt-24 max-w-7xl">
         
         {/* Header */}
         <div className="mb-6">
