@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
+import DemoCredentialsModal from '@/components/DemoCredentialsModal';
 
 const Pricing = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [showDemoModal, setShowDemoModal] = useState(false);
 
   const plans = [
     {
@@ -419,8 +421,8 @@ const Pricing = () => {
                 per month {billingCycle === 'annual' && '(billed annually)'}
               </div>
               
-              <a
-                href="#demo"
+              <button
+                onClick={() => setShowDemoModal(true)}
                 className={plan.featured ? 'cta-button-pricing' : 'cta-outline-pricing'}
                 style={{
                   width: '100%',
@@ -430,7 +432,7 @@ const Pricing = () => {
                 }}
               >
                 View Demo
-              </a>
+              </button>
               
               <div style={{
                 borderTop: `1px solid ${plan.featured ? 'rgba(255,255,255,0.1)' : '#e2e8f0'}`,
@@ -686,9 +688,9 @@ const Pricing = () => {
             will work for your business.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#" className="cta-button-pricing" style={{ fontSize: '18px', padding: '18px 40px' }}>
+            <button onClick={() => setShowDemoModal(true)} className="cta-button-pricing" style={{ fontSize: '18px', padding: '18px 40px' }}>
               View Demo →
-            </a>
+            </button>
             <a href="https://wa.me/2348179455117" className="cta-secondary-pricing" style={{ fontSize: '18px', padding: '18px 40px' }}>
               📞 WhatsApp Us
             </a>
@@ -709,6 +711,8 @@ const Pricing = () => {
         </div>
         <div>© 2025 SystemForce ERP. All rights reserved.</div>
       </footer>
+      
+      <DemoCredentialsModal open={showDemoModal} onOpenChange={setShowDemoModal} />
     </div>
   );
 };

@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import DemoCredentialsModal from './DemoCredentialsModal';
 
 const Navigation = () => {
+  const [showDemoModal, setShowDemoModal] = useState(false);
+
   return (
     <>
       <style>{`
@@ -60,12 +64,14 @@ const Navigation = () => {
             <Link to="/pricing" className="nav-link">Pricing</Link>
             <Link to="/referral" className="nav-link">Referral</Link>
             <span className="nav-link">FAQ</span>
-            <button className="cta-button-nav">
-              Start Free Trial
+            <button className="cta-button-nav" onClick={() => setShowDemoModal(true)}>
+              View Demo
             </button>
           </div>
         </div>
       </nav>
+      
+      <DemoCredentialsModal open={showDemoModal} onOpenChange={setShowDemoModal} />
     </>
   );
 };
