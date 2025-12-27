@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import DemoCredentialsModal from '@/components/DemoCredentialsModal';
 
 const SystemForceLanding = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showDemoModal, setShowDemoModal] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -190,12 +192,12 @@ const SystemForceLanding = () => {
           
           <div className="hidden md:flex gap-8 items-center">
             <a href="/systemthinking" className="nav-link">System Thinking</a>
-            <a href="/features" className="nav-link">Full Features</a>
-            <span className="nav-link">Pricing</span>
+            <a href="/features" className="nav-link">Features</a>
+            <a href="/pricing" className="nav-link">Pricing</a>
             <a href="/referral" className="nav-link">Referral</a>
             <span className="nav-link">FAQ</span>
-            <button className="cta-button" style={{ padding: '12px 24px', fontSize: '14px' }}>
-              Start Free Trial
+            <button className="cta-button" style={{ padding: '12px 24px', fontSize: '14px' }} onClick={() => setShowDemoModal(true)}>
+              View Demo
             </button>
           </div>
         </div>
@@ -224,8 +226,8 @@ const SystemForceLanding = () => {
             </p>
             
             <div className={`animate-in delay-4 flex gap-4 justify-center flex-wrap`}>
-              <button className="cta-button">
-                Start 14-Day Free Trial →
+              <button className="cta-button" onClick={() => setShowDemoModal(true)}>
+                View Demo →
               </button>
               <button className="cta-secondary">
                 📞 Talk to Sales Rep
@@ -233,7 +235,7 @@ const SystemForceLanding = () => {
             </div>
             
             <p className={`animate-in delay-5 text-sm text-slate-400 mt-4`}>
-              No card required • Full access • Set up in 24 hours
+              Full access • Set up in 24 hours
             </p>
           </div>
 
@@ -310,8 +312,8 @@ const SystemForceLanding = () => {
           </div>
           
           <div className="text-center mt-12">
-            <button className="cta-button">
-              See The Truth About Your Business →
+            <button className="cta-button" onClick={() => setShowDemoModal(true)}>
+              Try Live Demo →
             </button>
           </div>
         </div>
@@ -497,7 +499,7 @@ const SystemForceLanding = () => {
               Simple, <span className="text-orange-500">Transparent</span> Pricing
             </h2>
             <p className="text-slate-500 text-lg">
-              Start with 14-day free trial. No card required.
+              See it in action with our live demo.
             </p>
           </div>
           
@@ -541,8 +543,8 @@ const SystemForceLanding = () => {
                     </div>
                   ))}
                 </div>
-                <button className={plan.featured ? 'cta-button w-full mt-6' : 'cta-secondary w-full mt-6'}>
-                  Start Free Trial
+                <button className={plan.featured ? 'cta-button w-full mt-6' : 'cta-secondary w-full mt-6'} onClick={() => setShowDemoModal(true)}>
+                  View Demo
                 </button>
               </div>
             ))}
@@ -550,19 +552,18 @@ const SystemForceLanding = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
       <section className="py-24 bg-gradient-to-br from-slate-900 to-[#1e3a5f] text-center">
         <div className="max-w-[700px] mx-auto px-6">
           <h2 className="text-4xl font-bold text-white mb-5" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
             Ready to End the <span className="text-orange-500">Chaos</span>?
           </h2>
           <p className="text-slate-400 text-lg mb-10 leading-relaxed">
-            Start your 14-day free trial. Full access to everything. No card required.
+            Try the live demo now. Full access to everything.
             <br/>Talk to our sales team. Get set up in 24 hours.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <button className="cta-button text-lg px-12 py-5">
-              Start Free Trial →
+            <button className="cta-button text-lg px-12 py-5" onClick={() => setShowDemoModal(true)}>
+              Try Live Demo →
             </button>
             <button className="cta-secondary border-white text-white text-lg px-9 py-5">
               📞 WhatsApp: 08179455117
@@ -598,6 +599,8 @@ const SystemForceLanding = () => {
           </div>
         </div>
       </footer>
+      
+      <DemoCredentialsModal open={showDemoModal} onOpenChange={setShowDemoModal} />
     </div>
   );
 };
