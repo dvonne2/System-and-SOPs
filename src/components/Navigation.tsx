@@ -63,7 +63,7 @@ const Navigation = () => {
             <Link to="/features" className="nav-link">Features</Link>
             <Link to="/pricing" className="nav-link">Pricing</Link>
             <Link to="/referral" className="nav-link">Referral</Link>
-            <span className="nav-link">FAQ</span>
+            <Link to="/faq" className="nav-link">FAQ</Link>
             <button className="cta-button-nav" onClick={() => setShowDemoModal(true)}>
               View Demo
             </button>
