@@ -1,8 +1,8 @@
 const SystemPurpose = () => {
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 p-8 text-center shadow-lg mb-8">
+    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 p-8 text-center shadow-lg mb-8">
       <div className="relative z-10">
-        <div className="mb-3 text-sm font-semibold uppercase tracking-wider text-purple-200">
+        <div className="mb-3 text-sm font-semibold uppercase tracking-wider text-orange-100">
           System Purpose • The Queen Bee Role
         </div>
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight max-w-5xl mx-auto">
