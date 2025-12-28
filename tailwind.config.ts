@@ -47,6 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // SystemForce Brand Colors
+        sf: {
+          navy: "hsl(var(--sf-navy))",
+          orange: "hsl(var(--sf-orange))",
+          "dark-navy": "hsl(var(--sf-dark-navy))",
+          "light-gray": "hsl(var(--sf-light-gray))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

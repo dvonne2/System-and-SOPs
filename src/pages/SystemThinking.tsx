@@ -36,7 +36,7 @@ const Index = () => {
         {/* Header */}
         <div className="mb-6">
           <div className="flex items-center justify-between mb-2">
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground">Vitalvida System</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-secondary">Systemforce ERP</h1>
             <div className="text-sm text-muted-foreground">Donella Meadows-Style Systems Map</div>
           </div>
           <p className="text-sm text-muted-foreground">
