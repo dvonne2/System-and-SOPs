@@ -27,7 +27,7 @@ const SystemForceLanding = () => {
   ];
 
   const testimonials = [
-    { name: "Chioma A.", business: "Hair Business, Lagos", text: "I was losing ₦200k monthly to DA theft. SystemForce caught it in week 1." },
+    { name: "Chioma A.", business: "Beauty Business, Lagos", text: "I was losing ₦200k monthly to DA theft. SystemForce caught it in week 1." },
     { name: "Emeka O.", business: "Skincare Brand, Abuja", text: "My telesales DSR went from 55% to 82% once they knew the system was watching." },
     { name: "Fatima B.", business: "Fashion Store, Kano", text: "Finally know which media buyers are making me money vs wasting my ad spend." },
   ];
