@@ -6,7 +6,7 @@ const SystemPurpose = () => {
           System Purpose • The Queen Bee Role
         </div>
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight max-w-5xl mx-auto">
-          Get genuinely high-performing hair products into the hands of the right women, 
+          Get genuinely high-performing products into the hands of the right customers, 
           ensure they actually use them correctly, and turn them into loyal repeat customers — 
           profitably and at scale.
         </h1>

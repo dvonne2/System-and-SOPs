@@ -10,8 +10,8 @@ const SystemStartingPoint = () => {
         </h2>
       </div>
       <p className="text-sm text-green-900 leading-relaxed">
-        Following Donella Meadows' principle: The system begins where external energy first enters. 
-        For Vitalvida, this is <strong>Ad Spend → Attention → Leads</strong>. Without this initial 
+        The system begins where external energy first enters. 
+        For SystemForce, this is <strong>Ad Spend → Attention → Leads</strong>. Without this initial 
         input, no other flows activate. This is your forcing function — the spark that ignites every 
         subsequent stock and loop.
       </p>

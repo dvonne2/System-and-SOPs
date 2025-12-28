@@ -124,8 +124,8 @@ const VisualSystem = () => {
     <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)', padding: '20px', paddingTop: '80px' }}>
       <Navigation />
       <div className="max-w-[1600px] mx-auto bg-white rounded-xl p-8 shadow-2xl">
-        <h1 className="text-center text-4xl font-bold text-[#2c3e50] mb-2">🌱 Vitalvida System Map</h1>
-        <p className="text-center text-[#7f8c8d] italic mb-5">Enhanced Donella Meadows-Style Systems Thinking Diagram</p>
+        <h1 className="text-center text-4xl font-bold text-[#2c3e50] mb-2">🌱 SystemForce ERP Map</h1>
+        <p className="text-center text-[#7f8c8d] italic mb-5">Enhanced Systems Thinking Diagram</p>
         
         {/* Controls */}
         <div className="flex justify-center gap-4 mb-5 flex-wrap">
@@ -162,7 +162,7 @@ const VisualSystem = () => {
         {/* Purpose */}
         <div className="rounded-xl p-6 mb-8 text-center shadow-[0_4px_15px_rgba(102,126,234,0.3)]" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white' }}>
           <h2 className="mb-2.5 text-xl font-semibold">🎯 Queen Bee Role (System Purpose)</h2>
-          <p className="text-lg leading-relaxed">"Get genuinely high-performing hair products into the hands of the right women, ensure they actually use them correctly, and turn them into loyal repeat customers — profitably and at scale."</p>
+          <p className="text-lg leading-relaxed">"Get genuinely high-performing products into the hands of the right customers, ensure they actually use them correctly, and turn them into loyal repeat customers — profitably and at scale."</p>
         </div>
         
         {/* Diagram Container */}

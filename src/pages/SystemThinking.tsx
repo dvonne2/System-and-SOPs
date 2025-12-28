@@ -37,7 +37,7 @@ const Index = () => {
         <div className="mb-6">
           <div className="flex items-center justify-between mb-2">
             <h1 className="text-3xl md:text-4xl font-bold text-secondary">Systemforce ERP</h1>
-            <div className="text-sm text-muted-foreground">Donella Meadows-Style Systems Map</div>
+            <div className="text-sm text-muted-foreground">Systems Thinking Map</div>
           </div>
           <p className="text-sm text-muted-foreground">
             Interactive visualization of business operations as an interconnected system
@@ -180,7 +180,7 @@ const Index = () => {
         {/* Footer */}
         <div className="text-center text-sm text-muted-foreground mt-12 pb-8">
           <p>
-            Built with systems thinking principles • Inspired by Donella Meadows
+            Built with systems thinking principles
           </p>
         </div>
 

@@ -15,7 +15,7 @@ const LeveragePoints = () => {
       <div className="flex items-center gap-3 mb-4">
         <Zap className="w-6 h-6 text-amber-600" />
         <h2 className="text-xl font-bold text-amber-900">
-          High Leverage Points (Meadows-Style Intervention Points)
+          High Leverage Points (Intervention Points)
         </h2>
       </div>
       <ul className="space-y-2">
