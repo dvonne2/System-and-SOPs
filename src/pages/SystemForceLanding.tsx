@@ -251,7 +251,7 @@ const SystemForceLanding = () => {
                 href="https://demo.systemforce.ng" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="cta-button"
+                className="cta-button cta-pulse"
                 onClick={() => setDemoClicked(true)}
               >
                 View Demo →
@@ -260,7 +260,7 @@ const SystemForceLanding = () => {
                 href="https://demo.systemforce.ng/signup" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`cta-button cta-pulse ${demoClicked ? 'cta-highlight' : ''}`}
+                className={`cta-secondary ${demoClicked ? 'cta-highlight' : ''}`}
               >
                 Start 14-Day Trial
               </a>
