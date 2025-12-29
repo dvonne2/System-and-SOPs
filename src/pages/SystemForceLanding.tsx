@@ -4,10 +4,16 @@ import DemoCredentialsModal from '@/components/DemoCredentialsModal';
 const SystemForceLanding = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
+  const [demoClicked, setDemoClicked] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handleDemoClick = () => {
+    setDemoClicked(true);
+    setShowDemoModal(true);
+  };
 
   const features = [
     { icon: "📦", title: "Order Management", desc: "See every order in one place. Track status from pending to delivered. Nothing falls through the cracks." },
@@ -48,8 +54,23 @@ const SystemForceLanding = () => {
         }
         
         @keyframes pulse {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.05); }
+          0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4); }
+          50% { transform: scale(1.02); box-shadow: 0 6px 25px rgba(249, 115, 22, 0.5); }
+        }
+        
+        .cta-pulse {
+          animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .cta-highlight {
+          background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important;
+          border-color: #16a34a !important;
+          color: white !important;
+          box-shadow: 0 4px 20px rgba(22, 163, 74, 0.4);
+        }
+        
+        .cta-highlight:hover {
+          box-shadow: 0 8px 30px rgba(22, 163, 74, 0.5);
         }
         
         @keyframes slideIn {
@@ -226,16 +247,31 @@ const SystemForceLanding = () => {
             </p>
             
             <div className={`animate-in delay-4 flex gap-4 justify-center flex-wrap`}>
-              <button className="cta-button" onClick={() => setShowDemoModal(true)}>
+              <a 
+                href="https://demo.systemforce.ng" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="cta-button"
+                onClick={() => setDemoClicked(true)}
+              >
                 View Demo →
-              </button>
-              <button className="cta-secondary">
-                📞 Talk to Sales Rep
-              </button>
+              </a>
+              <a 
+                href="https://demo.systemforce.ng/signup" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`cta-button cta-pulse ${demoClicked ? 'cta-highlight' : ''}`}
+              >
+                Start 14-Day Trial
+              </a>
             </div>
             
             <p className={`animate-in delay-5 text-sm text-slate-400 mt-4`}>
-              Full access • Set up in 24 hours
+              {demoClicked ? (
+                <span className="text-green-600 font-medium">✨ Ready to try it yourself? Full access • Set up in 24 hours</span>
+              ) : (
+                <>3-min demo • No login required • See real examples</>
+              )}
             </p>
           </div>
 
